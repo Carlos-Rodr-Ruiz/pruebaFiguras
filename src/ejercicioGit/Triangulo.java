@@ -1,35 +1,42 @@
 package ejercicioGit;
 
+//Clase Triangulo
 public class Triangulo implements Figura {
+	private int lado;
+	private char caracter;
+
+	public Triangulo(int lado, char caracter) {
+		this.lado = lado;
+		this.caracter = caracter;
+	}
 
 	@Override
-	public String nomnbre() {
-		// TODO Auto-generated method stub
-		return null;
+	public String nombre() {
+		return "Triángulo tipo " + caracter + " lado " + lado;
 	}
 
 	@Override
 	public void dibujar() {
-		// TODO Auto-generated method stub
-		
+		for (int i = 0; i < lado; i++) {
+			for (int j = 0; j <= i; j++) {
+				System.out.print(caracter + " ");
+			}
+			System.out.println();
+		}
 	}
 
 	@Override
 	public int area() {
-		// TODO Auto-generated method stub
-		return 0;
+		return (lado * lado) / 2;
 	}
 
 	@Override
 	public void setCaracter(char c) {
-		// TODO Auto-generated method stub
-		
+		this.caracter = c;
 	}
 
 	@Override
 	public char getCaracter() {
-		// TODO Auto-generated method stub
-		return 0;
+		return caracter;
 	}
-
 }

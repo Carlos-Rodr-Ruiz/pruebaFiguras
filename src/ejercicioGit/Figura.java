@@ -2,7 +2,7 @@ package ejercicioGit;
 
 public interface Figura {
 
-	public String nomnbre();
+	public String nombre();
 	
 	public void dibujar();
 	

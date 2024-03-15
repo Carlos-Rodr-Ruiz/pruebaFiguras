@@ -1,35 +1,43 @@
 package ejercicioGit;
-
+//Clase Rectangulo
 public class Rectangulo implements Figura {
+ private int base;
+ private int altura;
+ private char caracter;
 
-	@Override
-	public String nomnbre() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+ public Rectangulo(int base, int altura, char caracter) {
+     this.base = base;
+     this.altura = altura;
+     this.caracter = caracter;
+ }
 
-	@Override
-	public void dibujar() {
-		// TODO Auto-generated method stub
-		
-	}
+ @Override
+ public String nombre() {
+     return "Rectángulo de " + base + "x" + altura;
+ }
 
-	@Override
-	public int area() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+ @Override
+ public void dibujar() {
+     for (int i = 0; i < altura; i++) {
+         for (int j = 0; j < base; j++) {
+             System.out.print(caracter + " ");
+         }
+         System.out.println();
+     }
+ }
 
-	@Override
-	public void setCaracter(char c) {
-		// TODO Auto-generated method stub
-		
-	}
+ @Override
+ public int area() {
+     return base * altura;
+ }
 
-	@Override
-	public char getCaracter() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+ @Override
+ public void setCaracter(char c) {
+     this.caracter = c;
+ }
 
+ @Override
+ public char getCaracter() {
+     return caracter;
+ }
 }
